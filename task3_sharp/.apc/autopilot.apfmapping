@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sharp.cpp" path="D:\experiment_class\experiment_2\task3_sharp\sharp.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.cpp" path="D:\experiment_class\experiment_2\task3_sharp\tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="rgb2gray.cpp" path="D:\experiment_class\experiment_2\task1_gray\rgb2gray.cpp"/>
+    <originFiles name="rgb2gray.h" path="D:\experiment_class\experiment_2\task1_gray\rgb2gray.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.cpp" path="D:\experiment_class\experiment_2\task1_gray\tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

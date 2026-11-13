@@ -1,0 +1,6 @@
+# Word 临时锁文件
+~$*
+
+# 系统/编辑器杂项
+.DS_Store
+Thumbs.db

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.816+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'col' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.810+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.804+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.800+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.797+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.794+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.790+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.788+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.785+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'sharp' consists of the following:&#xD;&#xA;&#x9;'load' operation ('col_loc_load', task3_sharp/ht_video_mem.h:435->task3_sharp/sharp.cpp:42) on local variable 'col' [89]  (0 ns)&#xD;&#xA;&#x9;'add' operation ('i_op', task3_sharp/ht_video_mem.h:435->task3_sharp/sharp.cpp:44) [116]  (2.18 ns)&#xD;&#xA;&#x9;'icmp' operation ('tmp_13', task3_sharp/ht_video_mem.h:436->task3_sharp/sharp.cpp:44) [119]  (2.11 ns)&#xD;&#xA;&#x9;'select' operation ('i_op_assign_3_s', task3_sharp/ht_video_mem.h:436->task3_sharp/sharp.cpp:44) [120]  (0.773 ns)&#xD;&#xA;&#x9;'store' operation (task3_sharp/ht_video_mem.h:436->task3_sharp/sharp.cpp:44) of variable 'i_op_assign_3_s', task3_sharp/ht_video_mem.h:436->task3_sharp/sharp.cpp:44 on local variable 'col' [121]  (1.45 ns)" projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.633+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (6.51575ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns)." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.631+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-70] Cannot meet target clock period from 'add' operation ('i_op') to 'store' operation of variable 'i_op_assign_3_s' on local variable 'col' (combination delay: 6.51575 ns) to honor II or Latency constraint in region 'sharp_label0.1'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.629+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.543+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.511+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.508+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.505+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.501+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.497+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.495+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.491+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.489+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.485+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.483+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.480+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.476+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'sharp_label0' (task3_sharp/sharp.cpp:34:6) in function 'sharp' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop." projectName="task3_sharp" solutionName="solution1" date="2026-11-11T16:35:24.474+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

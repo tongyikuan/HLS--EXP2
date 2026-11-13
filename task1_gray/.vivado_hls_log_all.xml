@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'gray' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="task1_gray" solutionName="solution1" date="2026-11-10T20:14:27.539+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'rgb2gray' consists of the following:&#xD;&#xA;&#x9;wire read on port 'rgb' (task1_gray/rgb2gray.cpp:2) [6]  (0 ns)&#xD;&#xA;&#x9;'mul' operation of DSP[22] ('tmp_8', task1_gray/rgb2gray.cpp:10) [21]  (2.82 ns)&#xD;&#xA;&#x9;'add' operation of DSP[22] ('tmp1', task1_gray/rgb2gray.cpp:10) [22]  (3.53 ns)" projectName="task1_gray" solutionName="solution1" date="2026-11-10T20:14:27.493+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (6.35ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns)." projectName="task1_gray" solutionName="solution1" date="2026-11-10T20:14:27.489+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

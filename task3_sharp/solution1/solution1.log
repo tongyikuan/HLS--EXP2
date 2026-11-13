@@ -1,0 +1,326 @@
+==============================================================
+File generated on Wed Nov 11 16:12:55 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Nov 11 16:13:37 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'task3_sharp/sharp.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.539 ; gain = 16.875
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.539 ; gain = 16.875
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 109.312 ; gain = 23.648
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 112.801 ; gain = 27.137
+INFO: [XFORM 203-101] Partitioning array 'line0.V'  in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'line1.V'  in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (task3_sharp/sharp.cpp:50:20) to (task3_sharp/sharp.cpp:41:32) in function 'sharp'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 138.199 ; gain = 52.535
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 139.426 ; gain = 53.762
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sharp' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sharp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'sharp': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (task3_sharp/sharp.cpp:47) of variable 'tmp.V', task3_sharp/sharp.cpp:43 on array 'line0_V_0' and 'load' operation ('line0_V_0_load', task3_sharp/sharp.cpp:46) on array 'line0_V_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (6.35ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'sharp' consists of the following:
+	wire read on port 'h_V' [18]  (0 ns)
+	'mul' operation of DSP[30] ('tmp_5', task3_sharp/sharp.cpp:41) [30]  (6.35 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.918 seconds; current allocated memory: 89.777 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.049 seconds; current allocated memory: 90.127 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sharp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/src_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/dst_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/y_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'y_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/x_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'x_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sharp' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'sharp_mul_mul_12ns_12ns_24_1_1' to 'sharp_mul_mul_12nbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sharp_mul_mul_12nbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sharp_mux_432_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sharp'.
+INFO: [HLS 200-111]  Elapsed time: 0.075 seconds; current allocated memory: 90.919 MB.
+INFO: [RTMG 210-278] Implementing memory 'sharp_line0_V_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 140.703 ; gain = 55.039
+INFO: [SYSC 207-301] Generating SystemC RTL for sharp.
+INFO: [VHDL 208-304] Generating VHDL RTL for sharp.
+INFO: [VLOG 209-307] Generating Verilog RTL for sharp.
+INFO: [HLS 200-112] Total elapsed time: 7.666 seconds; peak allocated memory: 90.919 MB.
+==============================================================
+File generated on Wed Nov 11 16:16:51 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'task3_sharp/sharp.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.871 ; gain = 17.398
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.871 ; gain = 17.398
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 109.594 ; gain = 24.121
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 113.391 ; gain = 27.918
+INFO: [XFORM 203-101] Partitioning array 'line0.V'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'line1.V'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-101] Partitioning array 'line2.V'  in dimension 1 with a cyclic factor 8.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (task3_sharp/sharp.cpp:59:20) to (task3_sharp/sharp.cpp:45:32) in function 'sharp'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 138.418 ; gain = 52.945
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line0.V.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line0.V.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line0.V.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line0.V.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line0.V.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line0.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line0.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line0.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line1.V.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line1.V.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line1.V.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line1.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line1.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line1.V.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line1.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line1.V.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line2.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line2.V.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line2.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line2.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line2.V.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line2.V.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line2.V.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'line2.V.6'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 139.922 ; gain = 54.449
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sharp' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sharp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (6.35ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'sharp' consists of the following:
+	wire read on port 'h_V' [38]  (0 ns)
+	'mul' operation of DSP[50] ('tmp_7', task3_sharp/sharp.cpp:45) [50]  (6.35 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.573 seconds; current allocated memory: 90.465 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.159 seconds; current allocated memory: 91.049 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sharp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/src_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/dst_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/y_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'y_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/x_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'x_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sharp' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'sharp_mul_mul_12ns_12ns_24_1_1' to 'sharp_mul_mul_12nbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sharp_mul_mul_12nbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sharp_mux_832_8_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sharp'.
+INFO: [HLS 200-111]  Elapsed time: 0.232 seconds; current allocated memory: 92.653 MB.
+INFO: [RTMG 210-278] Implementing memory 'sharp_line0_V_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'sharp_line2_V_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 144.531 ; gain = 59.059
+INFO: [SYSC 207-301] Generating SystemC RTL for sharp.
+INFO: [VHDL 208-304] Generating VHDL RTL for sharp.
+INFO: [VLOG 209-307] Generating Verilog RTL for sharp.
+INFO: [HLS 200-112] Total elapsed time: 8.223 seconds; peak allocated memory: 92.653 MB.
+==============================================================
+File generated on Wed Nov 11 16:17:25 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Wed Nov 11 16:35:07 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Nov 11 16:35:19 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'task3_sharp/sharp.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.609 ; gain = 16.961
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.609 ; gain = 16.961
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (task3_sharp/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (task3_sharp/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (task3_sharp/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (task3_sharp/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (task3_sharp/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (task3_sharp/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'sharp' (task3_sharp/sharp.cpp:42).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'sharp' (task3_sharp/sharp.cpp:44).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' (task3_sharp/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'sharp' (task3_sharp/sharp.cpp:47).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'sharp' (task3_sharp/sharp.cpp:48).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'sharp' (task3_sharp/sharp.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'sharp' (task3_sharp/sharp.cpp:50).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'sharp' (task3_sharp/sharp.cpp:51).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 107.500 ; gain = 21.852
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'sharp' (task3_sharp/sharp.cpp:31) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 109.328 ; gain = 23.680
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (task3_sharp/sharp.cpp:37) in function 'sharp' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (task3_sharp/ht_video_mem.h:72) in function 'sharp' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (task3_sharp/ht_video_mem.h:74) in function 'sharp' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (task3_sharp/ht_video_mem.h:429) in function 'sharp' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (task3_sharp/ht_video_mem.h:235) in function 'sharp' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (task3_sharp/ht_video_mem.h:72) in function 'sharp' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (task3_sharp/ht_video_mem.h:74) in function 'sharp' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5' (task3_sharp/ht_video_mem.h:429) in function 'sharp' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (task3_sharp/ht_video_mem.h:235) in function 'sharp' completely with a factor of 2.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'sharp' (task3_sharp/sharp.cpp:31) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (task3_sharp/sharp.cpp:47:22) to (task3_sharp/sharp.cpp:58:13) in function 'sharp'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 133.254 ; gain = 47.605
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'sharp_label0' (task3_sharp/sharp.cpp:34:6) in function 'sharp' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 133.254 ; gain = 47.605
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sharp' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sharp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'sharp_label0.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'add' operation ('i_op') to 'store' operation of variable 'i_op_assign_3_s' on local variable 'col' (combination delay: 6.51575 ns) to honor II or Latency constraint in region 'sharp_label0.1'.
+WARNING: [SCHED 204-21] Estimated clock period (6.51575ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'sharp' consists of the following:
+	'load' operation ('col_loc_load', task3_sharp/ht_video_mem.h:435->task3_sharp/sharp.cpp:42) on local variable 'col' [89]  (0 ns)
+	'add' operation ('i_op', task3_sharp/ht_video_mem.h:435->task3_sharp/sharp.cpp:44) [116]  (2.18 ns)
+	'icmp' operation ('tmp_13', task3_sharp/ht_video_mem.h:436->task3_sharp/sharp.cpp:44) [119]  (2.11 ns)
+	'select' operation ('i_op_assign_3_s', task3_sharp/ht_video_mem.h:436->task3_sharp/sharp.cpp:44) [120]  (0.773 ns)
+	'store' operation (task3_sharp/ht_video_mem.h:436->task3_sharp/sharp.cpp:44) of variable 'i_op_assign_3_s', task3_sharp/ht_video_mem.h:436->task3_sharp/sharp.cpp:44 on local variable 'col' [121]  (1.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 5.882 seconds; current allocated memory: 84.719 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 85.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sharp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sharp/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sharp' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'sharp_wlb_lb_val_V_0' to 'sharp_wlb_lb_val_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sharp_wlb_lb_val_V_1' to 'sharp_wlb_lb_val_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sharp_wlb_lb_val_V_2' to 'sharp_wlb_lb_val_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sharp'.
+INFO: [HLS 200-111]  Elapsed time: 0.124 seconds; current allocated memory: 86.289 MB.
+INFO: [RTMG 210-278] Implementing memory 'sharp_wlb_lb_val_bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'sharp_wlb_lb_val_dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 138.309 ; gain = 52.660
+INFO: [SYSC 207-301] Generating SystemC RTL for sharp.
+INFO: [VHDL 208-304] Generating VHDL RTL for sharp.
+INFO: [VLOG 209-307] Generating Verilog RTL for sharp.
+INFO: [HLS 200-112] Total elapsed time: 6.8 seconds; peak allocated memory: 86.289 MB.
+==============================================================
+File generated on Wed Nov 11 16:35:44 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="rgb2gray" xd:componentRef="rgb2gray" xd:initiationInterval="2" xd:clockPeriod="6.734" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="rgb" xd:originalName="rgb" xd:direction="in" xd:interfaceRef="rgb" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="gray" xd:originalName="gray" xd:direction="out" xd:interfaceRef="gray" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="1"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
+  <xd:resourceEstimates xd:LUT="85" xd:FF="38" xd:BRAM="0" xd:DSP="1"/>
+</xd:acceleratorMap>

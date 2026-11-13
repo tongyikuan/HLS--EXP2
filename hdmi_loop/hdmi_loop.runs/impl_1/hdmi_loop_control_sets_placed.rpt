@@ -1,0 +1,204 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Nov 11 16:59:56 2026
+| Host         : sx running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file hdmi_loop_control_sets_placed.rpt
+| Design       : hdmi_loop
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   131 |
+| Unused register locations in slices containing registers |   169 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      5 |            8 |
+|      7 |            1 |
+|      8 |           12 |
+|      9 |            2 |
+|     10 |            3 |
+|     11 |            6 |
+|     12 |           65 |
+|     13 |            9 |
+|    16+ |           24 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             276 |          103 |
+| No           | No                    | Yes                    |              45 |           25 |
+| No           | Yes                   | No                     |            6603 |         1243 |
+| Yes          | No                    | No                     |             542 |          139 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             333 |           93 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+----------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+
+|                  Clock Signal                  |                                      Enable Signal                                     |                                             Set/Reset Signal                                            | Slice Load Count | Bel Load Count |
++------------------------------------------------+----------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wlb_lb_val_V_1_U/gray8_gauss2d_3x3bkb_ram_U/in_valid_reg_reg   |                                                                                                         |                1 |              4 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/peyeopen_en                      | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/peyeopen_rst                                      |                2 |              5 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/pcenter_tap[5]_i_1__0_n_0        |                                                                                                         |                2 |              5 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/peyeopen_en                      | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/peyeopen_rst                                      |                1 |              5 |
+|  u_mmcm/inst/clk_out1                          |                                                                                        |                                                                                                         |                2 |              5 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/peyeopen_en                      | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/peyeopen_rst                                      |                2 |              5 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/pcenter_tap[5]_i_1__1_n_0        |                                                                                                         |                3 |              5 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/pcenter_tap[5]_i_1_n_0           |                                                                                                         |                2 |              5 |
+|  u_mmcm/inst/clk_out1                          | u_i2c_edid/count                                                                       | u_i2c_edid/sda_out                                                                                      |                2 |              5 |
+|  u_mmcm/inst/clk_out1                          | u_i2c_edid/rdata                                                                       | u_i2c_edid/SR[0]                                                                                        |                1 |              7 |
+|  u_mmcm/inst/clk_out1                          | u_i2c_edid/data                                                                        | u_i2c_edid/SR[0]                                                                                        |                2 |              8 |
+|  u_mmcm/inst/clk_out1                          | u_i2c_edid/addr                                                                        | u_i2c_edid/SR[0]                                                                                        |                3 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wlb_w_val_V_0_0_3                                              | u_sharp_wrapper/u_sharp/wlb_w_val_V_0_0[7]_i_1_n_0                                                      |                1 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wlb_w_val_V_2_0_loc_fu_130_1                                   | u_sharp_wrapper/u_sharp/tmp_V_fu_146_2                                                                  |                2 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/dd_V_reg_11350                                                 |                                                                                                         |                2 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/tmp_V_3_reg_10390                                              |                                                                                                         |                2 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wlb_w_val_V_0_0_1                                              | u_gauss_wrapper/u_gauss/wlb_w_val_V_0_0[7]_i_1_n_0                                                      |                1 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_channelbond/E[0]                            | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_channelbond/SR[0]                                            |                2 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/ap_condition_254                                               | u_gauss_wrapper/u_gauss/wlb_w_val_V_0_0_loc_2_reg_315                                                   |                1 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_channelbond/E[0]                            | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_channelbond/SR[0]                                            |                6 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wlb_w_val_V_2_1_loc_fu_136_2                                   | u_gauss_wrapper/u_gauss/wlb_w_val_V_0_0_loc_2_reg_315                                                   |                2 |              8 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_channelbond/E[0]                            | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_decoder/SR[0]                                                |                2 |              8 |
+|  u_mmcm/inst/clk_out2                          |                                                                                        | u_hdmi_rx/u_dvi_decoder/reset_reg_0                                                                     |                6 |              9 |
+|  u_mmcm/inst/clk_out1                          |                                                                                        | u_i2c_edid/SR[0]                                                                                        |                3 |              9 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/pctltkn_rst                                       |                3 |             10 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/pctltkn_rst                                       |                3 |             10 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/pctltkn_rst                                       |                2 |             10 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/E[0]                                                           | u_hdmi_rx/u_dvi_decoder/reset_reg_0                                                                     |                3 |             11 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/tmp_7_reg_10130                                                |                                                                                                         |                3 |             11 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/tmp_11_reg_10670                                               |                                                                                                         |                2 |             11 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/tmp_7_reg_10840                                                |                                                                                                         |                3 |             11 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/E[0]                                                           | u_hdmi_rx/u_dvi_decoder/reset_reg_0                                                                     |                4 |             11 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/tmp_11_reg_9960                                                |                                                                                                         |                2 |             11 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[7]_6                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[8]_4                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[6]_2                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[6]_0                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[8]_3                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[7]_3                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[10]_0                                               |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[9]                                                  |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[9]_3                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[6]_3                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[7]_1                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[8]_0                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[7]_0                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[8]_5                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[7]_5                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[7]                                                  |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[6]_1                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[7]_2                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[8]                                                  |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[10]_2                                               |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[9]_1                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[9]_0                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[6]                                                  |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[6]_4                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[10]_1                                               |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[9]_4                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[8]_1                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[10]                                                 |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[8]_2                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[7]_4                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[9]_2                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wr_ptr_reg[8]_6                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[9]_4                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/tmp_16_reg_10340                                               |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[10]                                                 |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[10]_0                                               |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[10]_2                                               |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[6]                                                  |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[6]_0                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[6]_1                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[10]_1                                               |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[6]_2                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[7]_0                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[8]_5                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[6]_4                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[7]_1                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[9]_2                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[9]_3                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[8]                                                  |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[8]_2                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[8]_1                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[8]_3                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[9]                                                  |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[8]_0                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[7]_5                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[7]_2                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[7]_4                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[9]_1                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[7]_3                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[8]_6                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[7]                                                  |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[8]_4                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[7]_6                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[9]_0                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wr_ptr_reg[6]_3                                                |                                                                                                         |                3 |             12 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/ap_CS_fsm_state2                                               |                                                                                                         |                4 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/ap_CS_fsm_state8                                               | u_gauss_wrapper/u_gauss/i_op_assign_reg_270_0                                                           |                4 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wlb_lb_val_V_1_U/gray8_gauss2d_3x3bkb_ram_U/wlb_lb_val_V_0_ce0 | u_gauss_wrapper/u_gauss/i_op_assign_1_reg_281                                                           |                4 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wlb_lb_val_V_1_U/sharp_wlb_lb_val_bkb_ram_U/wlb_lb_val_V_0_ce0 | u_sharp_wrapper/u_sharp/i_op_assign_1_reg_279                                                           |                4 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/ap_CS_fsm_state2                                               |                                                                                                         |                4 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/ap_CS_fsm_state7                                               | u_sharp_wrapper/u_sharp/i_op_assign_reg_268_0                                                           |                3 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/palign_rst                                        |                3 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/palign_rst                                        |                4 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/palign_rst                                        |                3 |             13 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_rgb2gray/ap_CS_fsm_state1                                                            |                                                                                                         |                3 |             18 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/reset_reg_3[0]                                                                  |                4 |             22 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/tmp_V_load_1_reg_11150                                         |                                                                                                         |                5 |             24 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wlb_w_val_V_2_0_loc_fu_130_1                                   |                                                                                                         |                7 |             24 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/SR[0]                                             |                6 |             27 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/fifo_rd                                                                | u_hdmi_rx/u_dvi_decoder/reset_reg_0                                                                     |                7 |             28 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/fifo_rd                                                                | u_hdmi_rx/u_dvi_decoder/reset_reg_0                                                                     |               10 |             28 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/tmp1_reg_1120_reg0                                             |                                                                                                         |                9 |             31 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/col_loc_fu_118[31]_i_1_n_0                                     |                                                                                                         |                9 |             32 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/col0                                                           |                                                                                                         |                6 |             32 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/col_loc_fu_120[31]_i_1_n_0                                     |                                                                                                         |                9 |             32 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/col0                                                           |                                                                                                         |                6 |             32 |
+|  u_mmcm/inst/clk_out2                          | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/rtimeout_cnt[0]_i_1__0_n_0       | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/u_syncbaserst/u_syncasync/osyncstages_reg[1]_0[0] |                8 |             32 |
+|  u_mmcm/inst/clk_out2                          | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/sel                              | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/u_syncbaserst/u_syncasync/osyncstages_reg[1]_0[0] |                8 |             32 |
+|  u_mmcm/inst/clk_out2                          | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/rtimeout_cnt[0]_i_1__1_n_0       | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/u_syncbaserst/u_syncasync/osyncstages_reg[1]_0[0] |                8 |             32 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wlb_w_val_V_2_1_loc_fu_136_2                                   |                                                                                                         |               12 |             40 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_rgb2dvi_0/reset_syn/AR[0]                                                                             |               23 |             42 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_channelbond/WRITE_EN                        |                                                                                                         |                9 |             60 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_sharp_wrapper/u_sharp/wlb_lb_val_V_1_U/sharp_wlb_lb_val_bkb_ram_U/WEA[0]             |                                                                                                         |               17 |             64 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/reset_reg_0                                                                     |               20 |             66 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_gauss_wrapper/u_gauss/wlb_lb_val_V_1_U/gray8_gauss2d_3x3bkb_ram_U/WEA[0]             |                                                                                                         |               23 |             96 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        |                                                                                                         |              173 |            571 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/reset_reg_2                                                                     |              557 |           3202 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                        | u_hdmi_rx/u_dvi_decoder/reset_reg_1                                                                     |              631 |           3202 |
++------------------------------------------------+----------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

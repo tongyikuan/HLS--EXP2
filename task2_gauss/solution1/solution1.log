@@ -1,0 +1,1333 @@
+==============================================================
+File generated on Tue Nov 10 20:56:11 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 20:56:53 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 102.438 ; gain = 17.008
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 102.438 ; gain = 17.008
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:47).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' (gray8_gauss2d_3x3/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:55).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 115.469 ; gain = 30.039
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:36) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 122.008 ; gain = 36.578
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:42) in function 'gray8_gauss2d_3x3' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:52) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:53) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:36) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:20)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 150.207 ; gain = 64.777
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gray8_gauss2d_3x3_label0' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:39:3) in function 'gray8_gauss2d_3x3' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 153.570 ; gain = 68.141
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'gray8_gauss2d_3x3_label0.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'add' operation ('i_op') to 'store' operation of variable 'i_op_assign_3_s' on local variable 'col' (combination delay: 6.51575 ns) to honor II or Latency constraint in region 'gray8_gauss2d_3x3_label0.1'.
+WARNING: [SCHED 204-21] Estimated clock period (6.51575ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	'load' operation ('col_loc_load', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:47) on local variable 'col' [89]  (0 ns)
+	'add' operation ('i_op', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49) [116]  (2.18 ns)
+	'icmp' operation ('tmp_13', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49) [119]  (2.11 ns)
+	'select' operation ('i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49) [120]  (0.773 ns)
+	'store' operation (gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49) of variable 'i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49 on local variable 'col' [121]  (1.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.782 seconds; current allocated memory: 103.024 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.082 seconds; current allocated memory: 103.641 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_2' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.134 seconds; current allocated memory: 104.642 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 157.828 ; gain = 72.398
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 8.734 seconds; peak allocated memory: 104.642 MB.
+==============================================================
+File generated on Tue Nov 10 21:08:47 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 102.523 ; gain = 17.555
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 102.523 ; gain = 17.555
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:47).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' (gray8_gauss2d_3x3/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:57).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 115.109 ; gain = 30.141
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:36) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 122.191 ; gain = 37.223
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:42) in function 'gray8_gauss2d_3x3': cannot completely unroll a loop with a variable trip count.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:53) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'ref' in dimension 1 automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.2' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:36) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:58:5) to (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:67:4) in function 'gray8_gauss2d_3x3'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 151.203 ; gain = 66.234
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:42:13) in function 'gray8_gauss2d_3x3' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gray8_gauss2d_3x3_label0' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:39:3) in function 'gray8_gauss2d_3x3' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 154.559 ; gain = 69.590
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+WARNING: [SCHED 204-21] Estimated clock period (6.35ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	'mul' operation of DSP[196] ('tmp_20', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:57) [195]  (2.82 ns)
+	'add' operation of DSP[196] ('d_V', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:57) [196]  (3.53 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.213 seconds; current allocated memory: 103.606 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.136 seconds; current allocated memory: 104.272 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mux_32_8_1_1' to 'gray8_gauss2d_3x3eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mux_32_12_1_1' to 'gray8_gauss2d_3x3fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mac_muladd_12ns_8ns_18ns_18_1_1' to 'gray8_gauss2d_3x3g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3eOg': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3g8j': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 105.470 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 159.410 ; gain = 74.441
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 9.366 seconds; peak allocated memory: 105.470 MB.
+==============================================================
+File generated on Tue Nov 10 21:16:40 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.664 ; gain = 17.496
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.664 ; gain = 17.496
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' (gray8_gauss2d_3x3/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:59).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 115.625 ; gain = 30.457
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 122.766 ; gain = 37.598
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:44) in function 'gray8_gauss2d_3x3': cannot completely unroll a loop with a variable trip count.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:55) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'ref' in dimension 1 automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.2' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:60:5) to (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:69:4) in function 'gray8_gauss2d_3x3'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 149.488 ; gain = 64.320
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:44:13) in function 'gray8_gauss2d_3x3' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gray8_gauss2d_3x3_label0' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:41:3) in function 'gray8_gauss2d_3x3' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 154.332 ; gain = 69.164
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+WARNING: [SCHED 204-21] Estimated clock period (6.35ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	'mul' operation of DSP[196] ('tmp_20', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:59) [195]  (2.82 ns)
+	'add' operation of DSP[196] ('d_V', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:59) [196]  (3.53 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.671 seconds; current allocated memory: 103.598 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.089 seconds; current allocated memory: 104.257 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mux_32_8_1_1' to 'gray8_gauss2d_3x3eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mux_32_12_1_1' to 'gray8_gauss2d_3x3fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mac_muladd_12ns_8ns_18ns_18_1_1' to 'gray8_gauss2d_3x3g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3eOg': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3g8j': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.147 seconds; current allocated memory: 105.455 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 160.078 ; gain = 74.910
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 7.679 seconds; peak allocated memory: 105.455 MB.
+==============================================================
+File generated on Tue Nov 10 21:17:09 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.762 ; gain = 17.820
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.762 ; gain = 17.820
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' (gray8_gauss2d_3x3/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:59).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 115.398 ; gain = 30.457
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 122.480 ; gain = 37.539
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:44) in function 'gray8_gauss2d_3x3' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:55) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:57) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:20)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 150.227 ; gain = 65.285
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gray8_gauss2d_3x3_label0' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:41:3) in function 'gray8_gauss2d_3x3' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 154.902 ; gain = 69.961
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'gray8_gauss2d_3x3_label0.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'add' operation ('i_op') to 'store' operation of variable 'i_op_assign_3_s' on local variable 'col' (combination delay: 6.51575 ns) to honor II or Latency constraint in region 'gray8_gauss2d_3x3_label0.1'.
+WARNING: [SCHED 204-21] Estimated clock period (6.51575ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	'load' operation ('col_loc_load', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49) on local variable 'col' [89]  (0 ns)
+	'add' operation ('i_op', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [116]  (2.18 ns)
+	'icmp' operation ('tmp_13', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [119]  (2.11 ns)
+	'select' operation ('i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [120]  (0.773 ns)
+	'store' operation (gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) of variable 'i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51 on local variable 'col' [121]  (1.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.647 seconds; current allocated memory: 103.000 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.069 seconds; current allocated memory: 103.595 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_2' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 104.627 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 157.637 ; gain = 72.695
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 7.527 seconds; peak allocated memory: 104.627 MB.
+==============================================================
+File generated on Tue Nov 10 21:20:18 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.469 ; gain = 16.645
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.469 ; gain = 16.645
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 1920, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 1920, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 1920, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::getval' (gray8_gauss2d_3x3/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::getval' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:59).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 115.410 ; gain = 29.586
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 122.441 ; gain = 36.617
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:44) in function 'gray8_gauss2d_3x3': cannot completely unroll a loop with a variable trip count.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:55) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'ref' in dimension 1 automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.2' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 1920, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:60:5) to (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:69:4) in function 'gray8_gauss2d_3x3'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 149.820 ; gain = 63.996
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:44:13) in function 'gray8_gauss2d_3x3' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gray8_gauss2d_3x3_label0' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:41:3) in function 'gray8_gauss2d_3x3' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 153.879 ; gain = 68.055
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+WARNING: [SCHED 204-21] Estimated clock period (6.35ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	'mul' operation of DSP[196] ('tmp_20', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:59) [195]  (2.82 ns)
+	'add' operation of DSP[196] ('d_V', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:59) [196]  (3.53 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.534 seconds; current allocated memory: 103.598 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.092 seconds; current allocated memory: 104.257 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mux_32_8_1_1' to 'gray8_gauss2d_3x3eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mux_32_12_1_1' to 'gray8_gauss2d_3x3fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mac_muladd_12ns_8ns_18ns_18_1_1' to 'gray8_gauss2d_3x3g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3eOg': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3fYi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3g8j': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.139 seconds; current allocated memory: 105.456 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 159.688 ; gain = 73.863
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 7.523 seconds; peak allocated memory: 105.456 MB.
+==============================================================
+File generated on Tue Nov 10 21:43:34 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.457 ; gain = 16.621
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.457 ; gain = 16.621
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' (gray8_gauss2d_3x3/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:58).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 115.430 ; gain = 29.594
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 122.637 ; gain = 36.801
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:44) in function 'gray8_gauss2d_3x3' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:54) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:56) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:20)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 150.367 ; gain = 64.531
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gray8_gauss2d_3x3_label0' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:41:3) in function 'gray8_gauss2d_3x3' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 153.965 ; gain = 68.129
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'gray8_gauss2d_3x3_label0.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'add' operation ('i_op') to 'store' operation of variable 'i_op_assign_3_s' on local variable 'col' (combination delay: 6.51575 ns) to honor II or Latency constraint in region 'gray8_gauss2d_3x3_label0.1'.
+WARNING: [SCHED 204-21] Estimated clock period (6.51575ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	'load' operation ('col_loc_load', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49) on local variable 'col' [89]  (0 ns)
+	'add' operation ('i_op', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [116]  (2.18 ns)
+	'icmp' operation ('tmp_13', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [119]  (2.11 ns)
+	'select' operation ('i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [120]  (0.773 ns)
+	'store' operation (gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) of variable 'i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51 on local variable 'col' [121]  (1.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.44 seconds; current allocated memory: 103.004 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.068 seconds; current allocated memory: 103.599 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_2' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.123 seconds; current allocated memory: 104.631 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 157.602 ; gain = 71.766
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 7.329 seconds; peak allocated memory: 104.631 MB.
+==============================================================
+File generated on Tue Nov 10 21:46:04 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 21:46:17 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.730 ; gain = 17.312
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 102.730 ; gain = 17.312
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' (gray8_gauss2d_3x3/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:58).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 115.562 ; gain = 30.145
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 122.895 ; gain = 37.477
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:44) in function 'gray8_gauss2d_3x3' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:54) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:56) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:20)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 151.191 ; gain = 65.773
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gray8_gauss2d_3x3_label0' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:41:3) in function 'gray8_gauss2d_3x3' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 154.781 ; gain = 69.363
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'gray8_gauss2d_3x3_label0.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'add' operation ('i_op') to 'store' operation of variable 'i_op_assign_3_s' on local variable 'col' (combination delay: 6.51575 ns) to honor II or Latency constraint in region 'gray8_gauss2d_3x3_label0.1'.
+WARNING: [SCHED 204-21] Estimated clock period (6.51575ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	'load' operation ('col_loc_load', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49) on local variable 'col' [89]  (0 ns)
+	'add' operation ('i_op', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [116]  (2.18 ns)
+	'icmp' operation ('tmp_13', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [119]  (2.11 ns)
+	'select' operation ('i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [120]  (0.773 ns)
+	'store' operation (gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) of variable 'i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51 on local variable 'col' [121]  (1.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.471 seconds; current allocated memory: 102.973 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.068 seconds; current allocated memory: 103.599 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_2' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.127 seconds; current allocated memory: 104.631 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 158.031 ; gain = 72.613
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 7.337 seconds; peak allocated memory: 104.631 MB.
+==============================================================
+File generated on Tue Nov 10 21:52:17 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 21:52:28 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.738 ; gain = 17.730
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.738 ; gain = 17.730
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 109.629 ; gain = 24.621
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 112.523 ; gain = 27.516
+ERROR: [XFORM 203-103] Array 'line0.V' : partitioned elements number (1920) has exeeded the threshold (1024), which may cause long run-time.
+ERROR: [HLS 200-70] Pre-synthesis failed.
+==============================================================
+File generated on Tue Nov 10 21:53:57 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 21:54:49 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 21:56:58 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 21:58:32 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 21:59:46 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 22:00:37 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 22:02:59 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 22:03:11 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.457 ; gain = 17.496
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.457 ; gain = 17.496
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 108.582 ; gain = 23.621
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 111.297 ; gain = 26.336
+INFO: [XFORM 203-101] Partitioning array 'line0.V'  in dimension 1 with a cyclic factor 3.
+INFO: [XFORM 203-101] Partitioning array 'line1.V'  in dimension 1 with a cyclic factor 3.
+INFO: [XFORM 203-11] Balancing expressions in function 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:13)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 134.949 ; gain = 49.988
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 135.430 ; gain = 50.469
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'gray8_gauss2d_3x3': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:47) of variable 'tmp.V', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:43 on array 'line0_V_0' and 'load' operation ('line0_V_0_load', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:46) on array 'line0_V_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 39.
+WARNING: [SCHED 204-21] Estimated clock period (6.35ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	wire read on port 'h_V' [17]  (0 ns)
+	'mul' operation of DSP[29] ('tmp_8', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:41) [29]  (6.35 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 5.878 seconds; current allocated memory: 87.187 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 87.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'y_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'x_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line0_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line0_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line0_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_urem_32ns_3ns_32_36_1' to 'gray8_gauss2d_3x3eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mul_34ns_32ns_65_2_1' to 'gray8_gauss2d_3x3fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mux_332_8_1_1' to 'gray8_gauss2d_3x3g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mul_mul_12ns_12ns_24_1_1' to 'gray8_gauss2d_3x3hbi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3g8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.109 seconds; current allocated memory: 89.009 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'gray8_gauss2d_3x3eOg_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'gray8_gauss2d_3x3fYi_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 140.434 ; gain = 55.473
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 6.819 seconds; peak allocated memory: 89.009 MB.
+==============================================================
+File generated on Tue Nov 10 22:05:16 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Tue Nov 10 22:05:25 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.711 ; gain = 17.535
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 102.711 ; gain = 17.535
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 107.277 ; gain = 22.102
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 109.605 ; gain = 24.430
+INFO: [XFORM 203-101] Partitioning array 'line0.V'  in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'line1.V'  in dimension 1 with a cyclic factor 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 133.270 ; gain = 48.094
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 133.730 ; gain = 48.555
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'gray8_gauss2d_3x3': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:53) of variable 'tmp.V', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:45 on array 'line0_V_0' and 'load' operation ('line0_V_0_load', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:48) on array 'line0_V_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+WARNING: [SCHED 204-21] Estimated clock period (6.35ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	wire read on port 'h_V' [22]  (0 ns)
+	'mul' operation of DSP[34] ('tmp_5', gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:43) [34]  (6.35 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 5.081 seconds; current allocated memory: 84.524 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.044 seconds; current allocated memory: 84.880 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'y_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'x_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line0_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line0_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line0_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line0_V_3' to 'gray8_gauss2d_3x3eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line1_V_0' to 'gray8_gauss2d_3x3fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line1_V_1' to 'gray8_gauss2d_3x3g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line1_V_2' to 'gray8_gauss2d_3x3hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_line1_V_3' to 'gray8_gauss2d_3x3ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mux_432_8_1_1' to 'gray8_gauss2d_3x3jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_mul_mul_12ns_12ns_24_1_1' to 'gray8_gauss2d_3x3kbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3jbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'gray8_gauss2d_3x3kbM': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.074 seconds; current allocated memory: 85.781 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 135.664 ; gain = 50.488
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 5.769 seconds; peak allocated memory: 85.781 MB.
+==============================================================
+File generated on Wed Nov 11 10:23:40 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Nov 11 10:23:49 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 102.707 ; gain = 17.684
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 102.707 ; gain = 17.684
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::shift_right' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:426).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:428).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::insert' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:431).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::shift_down' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:433).
+INFO: [XFORM 203-603] Inlining function 'HT_LineBuffer<3, 2048, ap_uint<8>, 0>::insert_bottom' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' (gray8_gauss2d_3x3/ht_video_mem.h:434).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::insert' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51).
+INFO: [XFORM 203-603] Inlining function 'HT_Window<3, 3, ap_uint<8> >::getval' into 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' (gray8_gauss2d_3x3/ht_video_mem.h:444).
+INFO: [XFORM 203-603] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::getval' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:58).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 115.902 ; gain = 30.879
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 122.758 ; gain = 37.734
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:44) in function 'gray8_gauss2d_3x3' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (gray8_gauss2d_3x3/ht_video_mem.h:72) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (gray8_gauss2d_3x3/ht_video_mem.h:74) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5' (gray8_gauss2d_3x3/ht_video_mem.h:429) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' (gray8_gauss2d_3x3/ht_video_mem.h:235) in function 'gray8_gauss2d_3x3' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:54) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7.1' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:56) in function 'gray8_gauss2d_3x3' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'wlb.lb.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wlb.w.val.V'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'HT_window_with_linebuffer<3, 3, 2048, ap_uint<8> >::set_size' into 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:38) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'gray8_gauss2d_3x3' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:20)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 150.762 ; gain = 65.738
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gray8_gauss2d_3x3_label0' (gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:41:3) in function 'gray8_gauss2d_3x3' : 
+
+the outer loop is not a perfect loop.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.xsize.V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.2.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.1.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.w.val.V.0.0'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'wlb.lb.val.V.0'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 154.895 ; gain = 69.871
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gray8_gauss2d_3x3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'gray8_gauss2d_3x3_label0.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'add' operation ('i_op') to 'store' operation of variable 'i_op_assign_3_s' on local variable 'col' (combination delay: 6.51575 ns) to honor II or Latency constraint in region 'gray8_gauss2d_3x3_label0.1'.
+WARNING: [SCHED 204-21] Estimated clock period (6.51575ns) exceeds the target (target clock period: 6.734ns, clock uncertainty: 0.84175ns, effective delay budget: 5.89225ns).
+WARNING: [SCHED 204-21] The critical path in module 'gray8_gauss2d_3x3' consists of the following:
+	'load' operation ('col_loc_load', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:49) on local variable 'col' [89]  (0 ns)
+	'add' operation ('i_op', gray8_gauss2d_3x3/ht_video_mem.h:435->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [116]  (2.18 ns)
+	'icmp' operation ('tmp_13', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [119]  (2.11 ns)
+	'select' operation ('i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) [120]  (0.773 ns)
+	'store' operation (gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51) of variable 'i_op_assign_3_s', gray8_gauss2d_3x3/ht_video_mem.h:436->gray8_gauss2d_3x3/gray8_gauss2d_3x3.cpp:51 on local variable 'col' [121]  (1.45 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.408 seconds; current allocated memory: 102.973 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.092 seconds; current allocated memory: 103.599 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gray8_gauss2d_3x3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/src_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/dst_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/y_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/x_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/w_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gray8_gauss2d_3x3/h_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gray8_gauss2d_3x3' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'wlb_xsize_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'col' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_0_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'wlb_w_val_V_2_2' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_0' to 'gray8_gauss2d_3x3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_1' to 'gray8_gauss2d_3x3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'gray8_gauss2d_3x3_wlb_lb_val_V_2' to 'gray8_gauss2d_3x3dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gray8_gauss2d_3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 104.631 MB.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'gray8_gauss2d_3x3dEe_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 158.105 ; gain = 73.082
+INFO: [SYSC 207-301] Generating SystemC RTL for gray8_gauss2d_3x3.
+INFO: [VHDL 208-304] Generating VHDL RTL for gray8_gauss2d_3x3.
+INFO: [VLOG 209-307] Generating Verilog RTL for gray8_gauss2d_3x3.
+INFO: [HLS 200-112] Total elapsed time: 11.327 seconds; peak allocated memory: 104.631 MB.
+==============================================================
+File generated on Wed Nov 11 10:38:47 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+ERROR: [IMPL 213-28] Failed to generate IP.
+==============================================================
+File generated on Wed Nov 11 10:39:16 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.734ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35tfgg484-2'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
